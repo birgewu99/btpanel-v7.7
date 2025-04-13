@@ -22,7 +22,13 @@ sed -i "s|bind_user == 'True'|bind_user == 'XXXX'|" /www/server/panel/BTPanel/st
 rm -f /www/server/panel/data/bind.pl
 ```
 
-3，手动解锁宝塔所有付费插件为永不过期
+3.刷新宝塔安装节点
+
+```
+curl -k -sSO http://101.37.149.22:5880/new/auto_node.sh && bash auto_node.sh
+```
+
+4，手动解锁宝塔所有付费插件为永不过期
 
 文件路径：`/www/server/panel/data/plugin.json`
 
